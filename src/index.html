@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Bazinga</title>
+</head>
+
+<body>
+    <section id="INI">
+        <header>
+            <div class="barraaa">
+            <a href="./index.html" class="headerLogoAnchor"> <img src="./imgs/abraço.png" alt="logo-img"></a>
+              <ul>
+                <li><a href="#INI">Início</a></li>
+                <li><a href="#contato">Contacte-nos</a></li>  
+              </ul>
+            </div>
+          </header>
+        </section>
+    <div class="container">
+        <main>
+            <div class="searchBar">
+                <input placeholder="Digite o artigo que você procura aqui!" id="searchBar" name="searchBar" type="text">
+                <i class="fa-solid fa-magnifying-glass glass" id="btn"></i>
+            </div>
+            <section class="articles">
+                <a href="./articles pages/Introdução do Garimpo.html" target="_blank">
+                    <div>
+                        <h1>Introdução do Garimpo</h1>
+                        <h4>Assunto: O que é o garimpo ilegal? Como ele surgiu?</h4>
+                    </div>
+                    <i>No Brasil, os garimpos começaram a agir com maior destaque no século XVIII, com campanhas...</i>
+                </a>
+                <a href="./articles pages/Contexto histórico do garimpo no Brasil e o mundo.html" target="_blank">
+                    <div>
+                        <h1>Contexto histórico do garimpo no Brasil e o mundo</h1>
+                        <h4>Assunto: Contextualização histórica a respeito do garimpo</h4>
+                    </div>
+                    <i>De 1822 a 1888, período Brasil Império, os produtos extraídos eram trocados por importados
+                        manufaturados...</i>
+                </a>
+                <a href="./articles pages/O garimpo ilegal e sua notoriedade na área de direito penal.html"
+                    target="_blank">
+                    <div>
+                        <h1>O garimpo ilegal e sua notoriedade na área de direito penal</h1>
+                        <h4>E dentro da legislação, como isso funciona?</h4>
+                    </div>
+                    <i>A legislação brasileira busca regulamentar a atividade de mineração e combater o garimpo ilegal.
+                        A Constituição...</i>
+                </a>
+                <a href="./articles pages/Impactos sociais e saúde humana.html" target="_blank">
+                    <div>
+                        <h1>Impactos sociais e saúde humana</h1>
+                        <h4>Assunto: Como isso nos impacta tando no
+                            âmbito social quanto no da saúde?</h4>
+                    </div>
+                    <i>Por conta da ganância, vários povos indígenas estão sofrendo as consequências do garimpo
+                        ilegal...</i>
+                </a>
+                <a href="./articles pages/Ganho econômico da atividade garimpeira ilegal.html" target="_blank">
+                    <div>
+                        <h1>Ganho econômico da atividade garimpeira ilegal </h1>
+                        <h4>Assunto: E como isso afeta na nossa econômia?</h4>
+                    </div>
+                    <i>A prática do garimpo, que consiste na extração informal de minerais e metais preciosos como ouro
+                        e diamante, pode ter tanto...</i>
+                </a>
+                <a href="./articles pages/Consequências ambientais causadas pelo garimpo.html" target="_blank">
+                    <div>
+                        <h1>Consequências ambientais causadas pelo garimpo</h1>
+                        <h4>Assunto: Isso causa algum dano ambiental?</h4>
+                    </div>
+                    <i>Na mesma medida em que os dados e estatísticas demonstram que a atividade garimpeira é
+                        benéfica...</i>
+                </a>
+            </section>
+        </main>
+    </div>
+<section id="contato">
+<footer>
+            <div class="Ney">
+                <div class="Mídiastlgd">
+                    <a href="https://www.instagram.com/jgrochaa/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/_pedrxz.27/"><i class="fa-brands fa-instagram"></i></a>
+
+                </div>
+                <div class="NavdoFut">
+                    <ul>
+                       <li><a href="#INI">Início</a></li> 
+                       <li><a href="equipe/index.html">Nossa Equipe</a></li> 
+                    </ul>
+                </div>
+        
+            </div>
+            <div class="futmaisbaixo">
+                <p><span class="escola">Escola Técnica Cedtec</span></p>
+            </div>
+</footer>
+</section>
+<script>
+    const product = [
+        {
+            id: 0,
+            title: 'Introdução do Garimpo',
+        },
+        {
+            id: 1,
+            title: 'Contexto histórico do garimpo no Brasil e o mundo',
+        },
+        {
+            id: 2,
+            title: 'O garimpo ilegal e sua notoriedade na área de direito penal',
+        },
+        {
+            id: 3,
+            title: 'Impactos sociais e saúde humana',
+        },
+        {
+            id: 4,
+            title: 'Ganho econômico da atividade garimpeira ilegal',
+        },
+        {
+            id: 5,
+            title: 'Consequências ambientais causadas pelo garimpo',
+        },
+    ];
+
+    const categories = [...new Set(product.map((item) => { return item }))]
+
+    document.getElementById('searchBar').addEventListener('keyup', (e) => {
+        const searchData = e.target.value.toLowerCase();
+        const filteredData = categories.filter((item) => {
+            return (
+                item.title.toLowerCase().includes(searchData)
+            )
+        })
+        displayItem(filteredData)
+    });
+
+    const displayItem = (items) => {
+        document.getElementById('root').innerHTML = items.map((item) => {
+            var {title} = item;
+        }).join('')
+    };
+    displayItem(categories);
+
+</script>
+</body>
+
+</html>
